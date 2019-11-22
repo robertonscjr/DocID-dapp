@@ -1,10 +1,8 @@
 #!/bin/sh
 
-# install npm and node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm install node
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+
+apt install -y nodejs
 
 # install truffle
 npm install -g truffle --silent
@@ -13,4 +11,4 @@ npm install -g truffle --silent
 npm install -g ganache-cli --silent
 
 # install hdwallet
-npm install -g truffle-hdwallet-provider --silent
+sudo npm -g install --save truffle-hdwallet-provider --silent
