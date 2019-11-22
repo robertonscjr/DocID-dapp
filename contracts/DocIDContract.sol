@@ -24,14 +24,14 @@ contract DocIDContract {
         owner = msg.sender;
     }
 
+
+
     function registerIdentity(
         string memory _firstName,
         string memory _lastName,
         string memory _dateOfBirth,
         string memory _homeAddress) public payable 
     {
-        require(msg.sender == owner);
-        
         identities[msg.sender] = Identity({
             firstName: _firstName,
             lastName: _lastName,
