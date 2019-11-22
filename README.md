@@ -4,12 +4,12 @@
 
 Truffle:
 ```bash
-npm install -g truffle
+$ npm install -g truffle
 ```
 
 Ganache:
 ```bash
-npm install -g ganache-cli
+$ npm install -g ganache-cli
 ```
 
 https://www.trufflesuite.com/
@@ -18,17 +18,22 @@ https://www.trufflesuite.com/
 
 Running ganache:
 ```bash
-ganache-cli
+$ ganache-cli
 ```
 
 Compiling the contract:
 ```bash
- truffle compile
+$ truffle compile
  ```
  
  Deploying the contract:
 ```bash
- truffle migrate
+ $ truffle migrate
+ ```
+ 
+ Deploying the contract on Ropsten Testnet:
+ ```bash
+ $ truffle deploy --network ropsten
  ```
 
 ## Configure Python
